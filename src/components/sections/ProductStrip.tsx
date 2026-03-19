@@ -10,6 +10,7 @@ const products = [
     subtitle: "With Moringa Oleifera Seed Butter + 8 Amino Acids",
     imageSrc: "/conditioner 3.png",
     tags: ["Repairs Damage", "Frizz Control", "Collagen Boost"],
+    price: "₹ 1,299",
     href: "/products",
   },
   {
@@ -17,6 +18,7 @@ const products = [
     subtitle: "With Baobab Extract + Hydrolyzed Keratin Complex",
     imageSrc: "/conditioner.png",
     tags: ["Deep Nourish", "Split End Repair", "Shine Boost"],
+    price: "₹ 1,499",
     href: "/products",
   },
 ];
