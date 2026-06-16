@@ -27,7 +27,7 @@ const pillars = [
     ),
     title: "Eco Packaging",
     description:
-      "Recyclable bottles, minimal packaging, zero unnecessary plastics. We are committed to reducing our environmental footprint with every product we create.",
+      "Recycled and recyclable materials, eco-conscious merchandising, and stability-first packaging that protects product safety and performance.",
   },
   {
     icon: (
@@ -38,8 +38,16 @@ const pillars = [
     ),
     title: "GMP Standards",
     description:
-      "Manufactured under Good Manufacturing Practice standards. Every batch is tested, documented, and traceable — meeting the same standards as pharmaceutical products.",
+      "Good Manufacturing Practice standards guide consistency, safety, and trust at every stage, from packaging selection to storage and distribution.",
   },
+];
+
+const processSteps = [
+  "Selecting the right jars, bottles, tubes, or pumps for the product type and consistency.",
+  "Preparing packaging components through hygienic handling and inspection.",
+  "Measuring and dispensing with precision tools for accurate, consistent filling.",
+  "Sealing and labeling with tamper-proof seals and compliant product information.",
+  "Storing and distributing with protective methods that maintain safety and effectiveness.",
 ];
 
 export default function Sustainability() {
@@ -75,6 +83,30 @@ export default function Sustainability() {
               </p>
             </div>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="mt-14 border-t border-light-grey pt-10"
+        >
+          <h3 className="font-dm-mono text-xs text-mid-grey tracking-label uppercase mb-6">
+            Manufacturing &amp; Quality Assurance
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            {processSteps.map((step, index) => (
+              <div key={step} className="border-l border-light-grey pl-4">
+                <span className="font-dm-mono text-xs text-mid-grey">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="font-dm-sans text-sm text-mid-grey leading-relaxed mt-3">
+                  {step}
+                </p>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

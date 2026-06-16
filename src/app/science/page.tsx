@@ -7,7 +7,7 @@ import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "The Science of BioFusion™ | La'Pura Professional",
   description:
-    "Deep-dive into the science behind BioFusion™ technology. Learn about Moringa Oleifera, Amino Acid Complexes, Hydrolyzed Proteins, Baobab Oil, Nettle Extract, and Panthenol in La'Pura Professional hair care.",
+    "Science-backed, safe, thoughtfully designed professional hair care. Learn how La'Pura Professional combines botanical actives, amino acids, sustainability, and GMP quality standards.",
 };
 
 const ingredients = [
@@ -16,66 +16,66 @@ const ingredients = [
     inci: "Moringa Oleifera Seed Oil / Butter",
     badge: "Natural Botanical",
     whatItIs:
-      "Moringa Oleifera, often called the 'Miracle Tree,' is native to parts of Africa and Asia. The seed butter is cold-pressed from Moringa seeds and contains over 30 antioxidants, vitamins A, C, and E, omega-9 fatty acids, and a rich mineral profile.",
+      "Moringa Oleifera Seed Butter is a nutrient-rich botanical active packed with vitamins, minerals, antioxidants, and fatty acids.",
     whatItDoes:
-      "In hair care, Moringa Seed Butter penetrates the cuticle layer to deliver deep nourishment. It smooths frizz by sealing the cuticle, reduces oxidative stress on hair follicles, and provides lasting moisture without buildup. Studies show it can improve hair elasticity by up to 28%.",
+      "It deeply nourishes, strengthens, and protects dull or damaged hair while restoring softness and natural shine.",
     whyWeUseIt:
-      "We chose Moringa because it provides comprehensive nourishment — it's not a single-function ingredient. It moisturizes, protects, repairs, and strengthens simultaneously. This aligns with our BioFusion™ philosophy of multi-pathway repair.",
+      "We use it because it supports the balance La'Pura is built on: botanical intelligence, sensorial elegance, and performance-driven care.",
   },
   {
     name: "8 Essential Amino Acid Complex",
     inci: "L-Arginine, L-Cystine, L-Lysine, L-Methionine, L-Proline, L-Serine, L-Threonine, L-Tyrosine",
     badge: "Biomimetic Active",
     whatItIs:
-      "A precisely calibrated blend of eight amino acids that mirror the natural composition of keratin — the structural protein that makes up 90% of your hair. This is not a synthetic approximation; it is a biomimetic reconstruction of your hair's own building blocks.",
+      "A blend of amino acids that supports keratin, the structural protein hair relies on for strength and resilience.",
     whatItDoes:
-      "These amino acids penetrate the hair cortex and participate directly in the synthesis of new keratin chains. L-Cystine forms disulfide bonds (the same bonds broken during chemical treatments), L-Arginine improves blood flow to follicles, and L-Tyrosine supports melanin production for color retention.",
+      "These amino acids help repair damaged cuticles, promote collagen formation, improve elasticity, and restore natural strength to hair.",
     whyWeUseIt:
-      "Traditional hair products coat the surface. Our amino acid complex works from inside the hair strand, rebuilding the internal structure. This is the core of BioFusion™ — repair at the molecular level, not cosmetic masking.",
+      "They are central to our damage-recovery approach, helping formulas do more than temporarily soften the surface.",
   },
   {
     name: "Hydrolyzed Wheat, Soy & Corn Protein",
     inci: "Hydrolyzed Wheat Protein, Hydrolyzed Soy Protein, Hydrolyzed Corn Protein",
     badge: "Plant Protein Complex",
     whatItIs:
-      "A triple-source plant protein complex where each protein is hydrolyzed (enzymatically broken down) to a molecular weight small enough to penetrate the hair shaft. Wheat protein targets the cortex, soy protein targets the cuticle, and corn protein forms a protective film.",
+      "A triple-source protein complex selected to reinforce and care for compromised hair fibers.",
     whatItDoes:
-      "This multi-layered protein approach increases tensile strength by up to 70%, reduces breakage during combing and styling, and creates a cumulative repair effect — each wash builds on the previous application. Hair becomes progressively stronger over 4–6 weeks of use.",
+      "It helps rebuild and reinforce the hair shaft, reduce breakage, and improve strength and resilience.",
     whyWeUseIt:
-      "Single-source proteins only address one layer of hair damage. Our triple protein complex provides cortex repair, cuticle smoothing, AND surface protection in one formula.",
+      "Professional hair care needs reliable performance across chemical and mechanical damage, not a one-note conditioning effect.",
   },
   {
-    name: "Baobab Seed Oil",
-    inci: "Adansonia Digitata Seed Oil",
+    name: "Adansonia Digitata (Baobab) Seed Extract",
+    inci: "Adansonia Digitata Seed Extract",
     badge: "Natural Botanical",
     whatItIs:
-      "Extracted from the fruit seeds of the Baobab tree (Adansonia Digitata), native to the African savanna. This oil is exceptionally rich in omega-3, omega-6, and omega-9 fatty acids, as well as vitamins A, D, E, and F.",
+      "A nutrient-rich botanical extract often called the Tree of Life.",
     whatItDoes:
-      "Baobab oil creates a lightweight protective barrier that shields hair from UV damage, environmental pollution, and heat styling. Its vitamin E content is a powerful antioxidant that prevents premature aging of the hair shaft. It improves elasticity and restores natural shine.",
+      "It helps revitalize hair, protect against dryness, restore moisture balance, smooth frizz, and support overall hair health.",
     whyWeUseIt:
-      "Baobab oil provides protection without heaviness — a critical balance for professional-grade products. It protects the repair work done by our amino acids and proteins, ensuring results last between washes.",
+      "It supports the gentle but effective performance we expect from botanical actives in professional formulas.",
   },
   {
     name: "Nettle Leaf Extract",
     inci: "Urtica Dioica Leaf Extract",
     badge: "Natural Botanical",
     whatItIs:
-      "An extract from the leaves of Stinging Nettle (Urtica Dioica), a plant used for centuries in traditional medicine. Rich in silica, iron, sulfur, and vitamins A, C, and K. Our nettle extract is standardized for consistent potency in every batch.",
+      "A traditional botanical extract used in scalp and hair-care formulations.",
     whatItDoes:
-      "Nettle extract stimulates microcirculation in the scalp, delivering more oxygen and nutrients to hair follicles. It has been clinically shown to inhibit 5-alpha reductase (the enzyme linked to hair thinning) and helps regulate sebum production for a balanced, healthy scalp.",
+      "It is known for stimulating the scalp, supporting natural hair growth, strengthening roots, and helping reduce hair fall.",
     whyWeUseIt:
-      "Healthy hair starts at the scalp. While our other ingredients repair existing hair, nettle extract ensures the environment for new hair growth is optimized. It's our investment in your hair's future.",
+      "Long-term care begins at the scalp, so our formulas include botanicals that support strength and vitality over time.",
   },
   {
     name: "Panthenol (Pro-Vitamin B5)",
     inci: "Panthenol",
     badge: "Vitamin Active",
     whatItIs:
-      "The alcohol analog of pantothenic acid (Vitamin B5). When applied topically, panthenol is absorbed into the hair shaft where it is converted to pantothenic acid, a component of Coenzyme A — essential for cellular metabolism.",
+      "A pro-vitamin active widely used in high-performance hair-care formulas.",
     whatItDoes:
-      "Panthenol coats each strand in a thin, flexible film that reflects light (creating visible shine) while sealing in moisture. It increases the diameter of individual hair strands by up to 10%, creating the appearance of thicker, fuller hair. It also provides thermal protection up to 230°C.",
+      "It penetrates the hair shaft to improve elasticity, add shine, lock in long-lasting hydration, and strengthen hair against breakage.",
     whyWeUseIt:
-      "Panthenol is one of the most well-studied ingredients in cosmetic science, with decades of clinical evidence supporting its efficacy. It bridges the gap between immediate cosmetic results (shine, volume) and long-term structural repair.",
+      "It bridges immediate sensorial benefits with the long-term care standards expected from salon-grade products.",
   },
 ];
 
@@ -84,31 +84,31 @@ const faqs = [
     number: "01",
     name: "What is BioFusion™ technology?",
     description:
-      "BioFusion™ is La'Pura Professional's proprietary approach that combines clinically validated botanical actives with biomimetic amino acid complexes. Unlike surface-level treatments, BioFusion™ works at the molecular level to rebuild the internal structure of each hair strand — repairing keratin bonds, sealing cuticles, and restoring elasticity from within.",
+      "BioFusion™ is La'Pura Professional's approach to combining proven actives, botanical intelligence, and salon-grade technologies in formulas designed for visible results, refined sensorial experience, and long-term care.",
   },
   {
     number: "02",
     name: "Are La'Pura products suitable for all hair types?",
     description:
-      "Yes. The BioFusion™ Restore collection is formulated to work across all hair types — straight, wavy, curly, and coily. The amino acid complex and botanical actives adapt to your hair's specific needs, providing repair and nourishment regardless of texture or density.",
+      "The BioFusion™ Restore collection is designed as professional salon care for a broad range of hair needs, with a focus on strength, frizz reduction, nourishment, shine, and manageability.",
   },
   {
     number: "03",
-    name: "How long before I see results?",
+    name: "What makes La'Pura Professional different?",
     description:
-      "You'll notice improved smoothness, shine, and detangling from the very first use. Structural repair (increased strength, reduced breakage, improved elasticity) builds cumulatively — most users report significant improvement within 4–6 weeks of consistent use.",
+      "La'Pura was created by a cosmetologist and R&D specialist to bridge salon luxury with true scientific performance, balancing efficacy, sensorial experience, and responsible formulation.",
   },
   {
     number: "04",
     name: "Are the products vegan and cruelty-free?",
     description:
-      "Absolutely. All La'Pura Professional products are 100% vegan and cruelty-free. We never test on animals, and our formulations contain no animal-derived ingredients. Our commitment to ethical beauty is non-negotiable.",
+      "Yes. La'Pura products are ethically developed and cruelty-free, and the BioFusion™ Restore benefits include multi-cultural vegan Keratin.",
   },
   {
     number: "05",
     name: "Where are La'Pura products manufactured?",
     description:
-      "All products are manufactured in GMP-certified facilities in India, maintaining pharmaceutical-grade quality standards. Every batch is tested, documented, and fully traceable from raw material sourcing to finished product.",
+      "La'Pura follows Good Manufacturing Practices to support consistency, safety, and trust through packaging selection, hygienic preparation, precision filling, compliant sealing and labeling, and careful storage and distribution.",
   },
 ];
 
@@ -133,8 +133,9 @@ export default function SciencePage() {
             The Science of BioFusion™
           </h1>
           <p className="font-dm-sans text-lg text-mid-grey text-center max-w-2xl mx-auto">
-            Every ingredient is selected for a reason. Every formulation is
-            validated by science. This is how BioFusion™ works.
+            Innovation begins at the formulation stage. Each ingredient is
+            carefully evaluated for safety, efficacy, and environmental
+            responsibility.
           </p>
         </div>
       </section>

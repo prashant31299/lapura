@@ -10,8 +10,8 @@ const credentials = [
         <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
       </svg>
     ),
-    title: "R&D Founded",
-    description: "Built from laboratory expertise",
+    title: "R&D Commitment",
+    description: "Science-backed, safe, thoughtfully designed",
   },
   {
     icon: (
@@ -21,8 +21,8 @@ const credentials = [
         <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
       </svg>
     ),
-    title: "8 Amino Acid Complex",
-    description: "Complete keratin protein rebuild",
+    title: "Professional Reliability",
+    description: "Formulations built for salon performance",
   },
   {
     icon: (
@@ -32,7 +32,7 @@ const credentials = [
       </svg>
     ),
     title: "Botanical Actives",
-    description: "Moringa, Baobab & Nettle extracts",
+    description: "Powered by nature, proven by science",
   },
   {
     icon: (
@@ -44,8 +44,8 @@ const credentials = [
         <path d="M5 9l-2-2M19 9l2-2" />
       </svg>
     ),
-    title: "Always Cruelty-Free",
-    description: "Ethical formulation, always",
+    title: "Cruelty-Free",
+    description: "Ethically developed, never tested on animals",
   },
 ];
 

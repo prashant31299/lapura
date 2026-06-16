@@ -24,8 +24,9 @@ export default function Hero() {
             </h1>
 
             <p className="text-base text-mid-grey font-dm-sans max-w-md mb-10 leading-relaxed">
-              Cosmetologist-formulated. Science-backed. Nature-powered.
-              BioFusion™ technology that repairs from the inside out.
+              Salon-grade formulations that balance scientific precision,
+              sensorial elegance, and long-term performance. Designed by a
+              cosmetologist and built on deep R&amp;D expertise.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

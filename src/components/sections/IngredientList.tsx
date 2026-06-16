@@ -9,37 +9,37 @@ const ingredients = [
     number: "01",
     name: "MORINGA OLEIFERA SEED BUTTER",
     description:
-      "Rich in vitamins A, C, and E, plus minerals and antioxidants. Deeply nourishes the hair shaft, smooths cuticles, and provides intense moisture without heaviness. Sourced from sustainably harvested Moringa seeds.",
+      "Rich in vitamins, minerals, antioxidants, and fatty acids. Deeply nourishes, strengthens, protects, and restores dull or damaged hair while supporting softness and natural shine.",
   },
   {
     number: "02",
     name: "HYDROLYZED WHEAT, SOY & CORN PROTEIN",
     description:
-      "Triple protein complex that penetrates the cortex to rebuild the internal hair structure. Increases tensile strength, reduces breakage by up to 70%, and restores elasticity to chemically treated or heat-damaged hair.",
+      "A triple protein complex that rebuilds and reinforces the hair shaft, reduces breakage, improves resilience, and helps repair damaged hair fibers.",
   },
   {
     number: "03",
     name: "8 ESSENTIAL AMINO ACID COMPLEX",
     description:
-      "A biomimetic blend of L-Arginine, L-Cystine, L-Lysine, L-Methionine, L-Proline, L-Serine, L-Threonine, and L-Tyrosine. These are the exact building blocks of keratin — your hair's natural structural protein.",
+      "The building blocks of keratin. These amino acids help repair damaged cuticles, promote collagen formation, improve elasticity, and restore natural strength.",
   },
   {
     number: "04",
-    name: "BAOBAB SEED OIL (ADANSONIA DIGITATA)",
+    name: "ADANSONIA DIGITATA (BAOBAB) SEED EXTRACT",
     description:
-      "Extracted from the African baobab tree. Exceptionally rich in omega-3 fatty acids and vitamins D and E. Creates a protective shield against UV damage while improving hair elasticity and shine.",
+      "Often called the Tree of Life, baobab is packed with nutrients and omega fatty acids that revitalize hair, protect against dryness, smooth frizz, and support overall hair health.",
   },
   {
     number: "05",
     name: "NETTLE LEAF EXTRACT (URTICA DIOICA)",
     description:
-      "Clinically shown to stimulate scalp circulation and promote hair growth. Rich in silica, iron, and sulfur — essential minerals for strong, healthy hair follicles. Helps regulate sebum production.",
+      "A botanical powerhouse known for stimulating the scalp, supporting natural hair growth, strengthening roots, and helping reduce hair fall.",
   },
   {
     number: "06",
     name: "PANTHENOL (PRO-VITAMIN B5)",
     description:
-      "Penetrates the hair cuticle and binds moisture to each strand. Increases hair diameter by up to 10%, creating the appearance of thicker, fuller hair. Also provides heat protection up to 230°C.",
+      "A pro-vitamin that penetrates the hair shaft to improve elasticity, add shine, lock in long-lasting hydration, and strengthen hair against breakage.",
   },
 ];
 

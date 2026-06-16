@@ -16,96 +16,138 @@ const products = [
   {
     id: "biofusion-restore-shampoo",
     name: "BioFusion™ Restore Shampoo",
-    tagline: "Professional cleansing that rebuilds while it purifies",
+    tagline: "Professional Expert Formula",
     imageSrc: "/conditioner 3.png",
     imageAlt: "La'Pura Professional BioFusion™ Restore Shampoo — 300ML",
     price: "₹ 1,299",
     whatItIs:
-      "A professional-grade restorative shampoo powered by BioFusion™ technology. Formulated with Moringa Oleifera Seed Butter and a complete 8 Amino Acid Complex that penetrates the hair cortex to rebuild keratin bonds from within.",
+      "A gentle yet powerful cleanser designed for salon-quality care. Formulated with Moringa Seed Butter and 8 Essential Amino Acids, it strengthens hair from root to tip while reducing frizz and sealing split ends caused by chemical and mechanical damage.",
     benefits: [
-      "Repairs internal hair structure at the molecular level",
-      "Reduces frizz and flyaways by smoothing cuticle layers",
-      "Boosts natural collagen production in the scalp",
-      "Strengthens hair against breakage and split ends",
-      "Gently cleanses without stripping natural oils",
-      "Prepares hair for optimal conditioner absorption",
+      "Multi-cultural vegan Keratin",
+      "Boosts collagen formation",
+      "Deeply nourishes with Moringa Seed Butter",
+      "Fortified with essential amino acids for optimized damage recovery",
+      "Enhances moisture retention and hydration",
+      "Promotes stronger, shinier hair",
+      "Seals and repairs split ends",
     ],
     howToUse: [
-      "Wet hair thoroughly with lukewarm water",
-      "Apply a coin-sized amount to palms and distribute evenly through hair",
-      "Massage into scalp using circular motions for 2–3 minutes",
-      "Allow the BioFusion™ actives to penetrate for 60 seconds",
-      "Rinse thoroughly. Follow with BioFusion™ Restore Conditioner",
+      "Apply to wet hair",
+      "Massage into scalp and lengths",
+      "Rinse thoroughly",
+      "For best results, use with BioFusion™ Restore Conditioner",
     ],
     keyIngredients: [
       {
         number: "01",
         name: "MORINGA OLEIFERA SEED BUTTER",
         description:
-          "Rich in vitamins A, C, and E, plus minerals and antioxidants. Deeply nourishes the hair shaft and smooths cuticles.",
+          "Rich in vitamins, minerals, and antioxidants, moringa butter deeply nourishes, strengthens, and restores dull, damaged hair while providing natural shine.",
       },
       {
         number: "02",
         name: "HYDROLYZED WHEAT, SOY & CORN PROTEIN",
         description:
-          "Triple protein complex that penetrates the cortex to rebuild internal hair structure and increase tensile strength.",
+          "A triple protein complex that rebuilds and reinforces the hair shaft, reduces breakage, and improves hair strength and resilience.",
       },
       {
         number: "03",
+        name: "ADANSONIA DIGITATA (BAOBAB) SEED EXTRACT",
+        description:
+          "Often called the Tree of Life, baobab is packed with nutrients that revitalize hair, protect against dryness, and improve overall hair health.",
+      },
+      {
+        number: "04",
         name: "8 ESSENTIAL AMINO ACID COMPLEX",
         description:
-          "Biomimetic blend of L-Arginine, L-Cystine, L-Lysine, L-Methionine, L-Proline, L-Serine, L-Threonine, and L-Tyrosine — the building blocks of keratin.",
+          "The building blocks of keratin, these amino acids repair damaged cuticles, promote collagen formation, improve elasticity, and restore natural strength to hair.",
+      },
+      {
+        number: "05",
+        name: "URTICA DIOICA (STINGING NETTLE) EXTRACT",
+        description:
+          "A botanical powerhouse known for stimulating the scalp, promoting natural hair growth, and helping reduce hair fall.",
+      },
+      {
+        number: "06",
+        name: "SODIUM PYRROLIDONE CARBOXYLIC ACID (PCA)",
+        description:
+          "A powerful humectant that helps hair retain essential moisture, keeping it soft, smooth, and hydrated.",
+      },
+      {
+        number: "07",
+        name: "TREHALOSE",
+        description:
+          "A natural sugar with antioxidant properties that protects hair fibers from environmental stress and helps maintain elasticity.",
       },
     ],
     inciList:
-      "Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Moringa Oleifera Seed Butter, Hydrolyzed Wheat Protein, Hydrolyzed Soy Protein, Hydrolyzed Corn Protein, L-Arginine, L-Cystine, L-Lysine, L-Methionine, L-Proline, L-Serine, L-Threonine, L-Tyrosine, Panthenol, Urtica Dioica Leaf Extract, Adansonia Digitata Seed Oil, Glycerin, Polyquaternium-7, Citric Acid, Sodium Chloride, DMDM Hydantoin, Fragrance, CI 19140",
+      "Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Acrylates Copolymer, Ethylene Glycol Distearate, Sodium Cocomonoethanolamide, Glycerin, Sodium Lauryl Sulfoacetate, Dimethiconol, TEA-Dodecylbenzenesulfonate, Trideceth-10, Ethylhexylglycerin, Phenoxyethanol, Disodium EDTA, Sodium Hydroxide, Perfume.",
   },
   {
     id: "biofusion-restore-conditioner",
     name: "BioFusion™ Restore Conditioner",
-    tagline: "Deep molecular repair meets weightless nourishment",
+    tagline: "Professional Expert Formula",
     imageSrc: "/conditioner.png",
     imageAlt: "La'Pura Professional BioFusion™ Restore Conditioner — 300ML",
     price: "₹ 1,499",
     whatItIs:
-      "A professional-grade restorative conditioner that seals, protects, and deeply nourishes every strand. Powered by Baobab Seed Oil, Hydrolyzed Keratin Complex, and Panthenol (Pro-Vitamin B5) for visible transformation from first use.",
+      "A deeply hydrating conditioner crafted with Moringa Seed Butter and 8 Essential Amino Acids. It smooths, detangles, and restores manageability, leaving hair soft, shiny, and resilient.",
     benefits: [
-      "Seals cuticles for long-lasting smoothness and shine",
-      "Repairs split ends and prevents further breakage",
-      "Provides deep nourishment without weighing hair down",
-      "Creates heat protection up to 230°C from Panthenol",
-      "Increases hair diameter for a thicker, fuller appearance",
-      "Enhances natural shine and light reflection",
+      "Multi-cultural vegan Keratin",
+      "Boosts collagen formation",
+      "Deeply nourishes with Moringa Seed Butter",
+      "Fortified with essential amino acids for optimized damage recovery",
+      "Enhances moisture retention and hydration",
+      "Promotes stronger, shinier hair",
+      "Seals and repairs split ends",
     ],
     howToUse: [
-      "After shampooing, gently squeeze excess water from hair",
-      "Apply a generous amount from mid-lengths to ends",
-      "Comb through with a wide-tooth comb for even distribution",
-      "Leave on for 3–5 minutes to allow deep penetration",
-      "Rinse with cool water to seal cuticles and lock in moisture",
+      "Dispense an appropriate amount into your palm",
+      "Apply evenly, focusing on the mid-lengths to ends",
+      "Allow the conditioner to sit for 2–5 minutes",
+      "Rinse thoroughly with cool or lukewarm water to seal the hair cuticle and enhance shine",
     ],
     keyIngredients: [
       {
         number: "01",
         name: "BAOBAB SEED OIL (ADANSONIA DIGITATA)",
         description:
-          "Exceptionally rich in omega-3 fatty acids and vitamins D and E. Creates a protective shield against UV damage.",
+          "Rich in omega fatty acids and vitamins, baobab extract helps restore moisture balance, smooths frizz, and shields hair from environmental damage.",
       },
       {
         number: "02",
-        name: "NETTLE LEAF EXTRACT (URTICA DIOICA)",
+        name: "MORINGA OLEIFERA SEED BUTTER",
         description:
-          "Stimulates scalp circulation and promotes hair growth. Rich in silica, iron, and sulfur for strong follicles.",
+          "Packed with antioxidants, vitamins, and fatty acids, moringa butter deeply nourishes and protects hair, restoring softness and natural shine.",
       },
       {
         number: "03",
+        name: "HYDROLYZED WHEAT, SOY & CORN PROTEIN",
+        description:
+          "A powerful protein blend that repairs and strengthens damaged hair fibers, reduces split ends, and improves overall hair resilience.",
+      },
+      {
+        number: "04",
+        name: "8 ESSENTIAL AMINO ACID COMPLEX",
+        description:
+          "These building blocks of keratin repair weak spots, improve hair structure, and boost collagen formation for stronger, healthier strands.",
+      },
+      {
+        number: "05",
+        name: "URTICA DIOICA (STINGING NETTLE) EXTRACT",
+        description:
+          "A natural scalp stimulant that supports healthy hair growth, strengthens roots, and reduces hair thinning.",
+      },
+      {
+        number: "06",
         name: "PANTHENOL (PRO-VITAMIN B5)",
         description:
-          "Penetrates the cuticle and binds moisture. Increases hair diameter up to 10% and provides heat protection to 230°C.",
+          "A pro-vitamin that penetrates the hair shaft to improve elasticity, add shine, lock in long-lasting hydration, and strengthen hair against breakage.",
       },
     ],
     inciList:
-      "Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Adansonia Digitata Seed Oil, Hydrolyzed Keratin, Panthenol, Urtica Dioica Leaf Extract, Moringa Oleifera Seed Butter, L-Arginine, L-Cystine, L-Lysine, L-Methionine, L-Proline, L-Serine, L-Threonine, L-Tyrosine, Glycerin, Cetrimonium Chloride, Isopropyl Alcohol, Citric Acid, Fragrance",
+      "Aqua, Cyclopentasiloxane, Behentrimonium chloride, Stearic acid, Glycerin, Cetostearyl alcohol, Glyceryl monostearate, Stearamidopropyl dimethylamine, Dimethiconol, TEA-Dodecylbenzenesulfonate, Trideceth-10, Amodimethicone, Trideceth-12, Cetrimonium Chloride, Ethylhexylglycerin, Phenoxyethanol, Disodium EDTA, Perfume.",
   },
 ];
 
@@ -129,7 +171,8 @@ export default function ProductsPage() {
             BioFusion™ Restore Collection
           </h1>
           <p className="font-dm-sans text-lg text-mid-grey text-center mb-0">
-            Professional Expert Formulas
+            Salon-quality care powered by Moringa Seed Butter, botanical
+            intelligence, and 8 Essential Amino Acids.
           </p>
         </div>
       </section>

@@ -6,23 +6,23 @@ import SectionLabel from "@/components/ui/SectionLabel";
 const rows = [
   {
     promise: "Cosmetologist-Formulated",
-    meaning: "Created by an expert with real R&D experience",
+    meaning: "Created by a professional with years of hands-on R&D expertise",
   },
   {
     promise: "Salon-Exclusive Quality",
-    meaning: "Professional-grade actives, real measurable results",
+    meaning: "Designed for high-performance professional results",
   },
   {
     promise: "Science + Nature Balance",
-    meaning: "Proven botanicals + scientific validation in every formula",
+    meaning: "Natural botanicals like moringa blended with science-backed amino acids",
   },
   {
     promise: "Result-Oriented",
-    meaning: "Growth, strength, frizz reduction — results you can see and feel",
+    meaning: "Focused on visible benefits: growth support, strength, and frizz reduction",
   },
   {
-    promise: "Always Cruelty-Free",
-    meaning: "Ethical formulation — never tested on animals",
+    promise: "Supporting Startups",
+    meaning: "A brand born from helping others grow, just like your hair",
   },
 ];
 

@@ -24,15 +24,19 @@ export default function FounderStory() {
           — Founder &amp; CEO, Cosmetologist &amp; R&amp;D Specialist
         </p>
 
+        <p className="text-base text-mid-grey font-dm-sans leading-relaxed max-w-2xl mx-auto mb-6">
+          La&apos;Pura Professional was born from a clear understanding of the
+          professional beauty industry and its unmet needs. Too often,
+          professional products lean either on marketing-driven claims or on
+          natural concepts without enough scientific validation. La&apos;Pura was
+          created to restore that balance.
+        </p>
+
         <p className="text-base text-mid-grey font-dm-sans leading-relaxed max-w-2xl mx-auto">
-          Born from years of hands-on cosmetology and deep research into hair
-          science, La&apos;Pura Professional was founded with one mission: to make
-          truly effective, professional-grade hair care accessible to everyone.
-          Every formula is developed using BioFusion™ technology — our proprietary
-          approach that combines clinically validated botanical actives with
-          biomimetic amino acid complexes. We don&apos;t just treat the surface. We
-          rebuild hair from within, strand by strand, bond by bond. This is not
-          marketing. This is science you can feel.
+          Every formulation is developed with a research-first mindset,
+          combining proven actives, botanical intelligence, and salon-grade
+          technologies to deliver visible results, refined sensorial experience,
+          and long-term care.
         </p>
       </motion.div>
     </section>

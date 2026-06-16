@@ -7,7 +7,7 @@ export const organizationSchema = {
   url: BASE_URL,
   logo: `${BASE_URL}/conditioner.png`,
   description:
-    "Cosmetologist-formulated, science-backed professional hair care. BioFusion™ technology with Moringa Seed Butter and 8 Essential Amino Acids.",
+    "Salon-grade formulations that balance scientific precision, sensorial elegance, and long-term performance. Designed by a cosmetologist and built on deep R&D expertise.",
   sameAs: [],
   contactPoint: {
     "@type": "ContactPoint",
@@ -22,7 +22,7 @@ export const productSchemas = [
     "@type": "Product",
     name: "BioFusion™ Restore Shampoo",
     description:
-      "Professional-grade shampoo with Moringa Oleifera Seed Butter, 8 Essential Amino Acids, Hydrolyzed Wheat, Soy & Corn Protein. Repairs damage, controls frizz, boosts collagen. 300ML.",
+      "Gentle yet powerful professional cleanser with Moringa Seed Butter and 8 Essential Amino Acids. Strengthens hair from root to tip while reducing frizz and sealing split ends caused by chemical and mechanical damage. 300ML.",
     image: `${BASE_URL}/conditioner 3.png`,
     brand: {
       "@type": "Brand",
@@ -45,7 +45,7 @@ export const productSchemas = [
     "@type": "Product",
     name: "BioFusion™ Restore Conditioner",
     description:
-      "Professional-grade conditioner with Baobab Extract, Hydrolyzed Keratin Complex, Panthenol (Pro-Vitamin B5). Deep nourishment, split end repair, shine boost. 300ML.",
+      "Deeply hydrating conditioner with Moringa Seed Butter and 8 Essential Amino Acids. Smooths, detangles, and restores manageability, leaving hair soft, shiny, and resilient. 300ML.",
     image: `${BASE_URL}/conditioner.png`,
     brand: {
       "@type": "Brand",
@@ -97,7 +97,7 @@ export const faqSchema = {
       name: "What is BioFusion™ technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "BioFusion™ is La'Pura Professional's proprietary approach that combines clinically validated botanical actives with biomimetic amino acid complexes to repair hair from within at the molecular level.",
+        text: "BioFusion™ is La'Pura Professional's approach to combining proven actives, botanical intelligence, and salon-grade technologies in formulas designed for visible results, refined sensorial experience, and long-term care.",
       },
     },
     {
@@ -105,7 +105,7 @@ export const faqSchema = {
       name: "What are the key ingredients in La'Pura Professional products?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our key ingredients include Moringa Oleifera Seed Butter, an 8 Essential Amino Acid Complex, Hydrolyzed Wheat/Soy/Corn Protein, Baobab Seed Oil, Nettle Leaf Extract, and Panthenol (Pro-Vitamin B5).",
+        text: "Our key ingredients include Moringa Oleifera Seed Butter, 8 Essential Amino Acids, Hydrolyzed Wheat/Soy/Corn Protein, Adansonia Digitata (Baobab) Seed Extract, Urtica Dioica (Stinging Nettle) Extract, Sodium PCA, Trehalose, and Panthenol (Pro-Vitamin B5).",
       },
     },
     {
@@ -113,15 +113,15 @@ export const faqSchema = {
       name: "Are La'Pura Professional products cruelty-free?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, all La'Pura Professional products are 100% cruelty-free. We never test on animals and our formulations are entirely vegan.",
+        text: "Yes. La'Pura products are ethically developed and cruelty-free, and the BioFusion™ Restore benefits include multi-cultural vegan Keratin.",
       },
     },
     {
       "@type": "Question",
-      name: "Is La'Pura Professional suitable for all hair types?",
+      name: "What makes La'Pura Professional different?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, the BioFusion™ Restore collection is formulated to work across all hair types. The amino acid complex and botanical actives adapt to your hair's specific needs.",
+        text: "La'Pura was created by a cosmetologist and R&D specialist to bridge salon luxury with true scientific performance, balancing efficacy, sensorial experience, and responsible formulation.",
       },
     },
     {
@@ -129,7 +129,7 @@ export const faqSchema = {
       name: "Where are La'Pura Professional products manufactured?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All products are manufactured in GMP-certified facilities in India, maintaining pharmaceutical-grade quality standards with full batch traceability.",
+        text: "La'Pura follows Good Manufacturing Practices to support consistency, safety, and trust through packaging selection, hygienic preparation, precision filling, compliant sealing and labeling, and careful storage and distribution.",
       },
     },
   ],
