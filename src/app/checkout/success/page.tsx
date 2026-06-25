@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function CheckoutSuccessPage() {
   return (
-    <div className="bg-off-white min-h-[70vh] flex flex-col items-center justify-center section-padding">
-      <div className="max-w-md w-full text-center bg-true-white p-12 border border-light-grey shadow-sm">
+    <div className="bg-off-white min-h-[70vh] flex flex-col items-center justify-center section-padding content-padding">
+      <div className="max-w-md w-full text-center bg-true-white p-6 sm:p-10 md:p-12 border border-light-grey shadow-sm">
         <div className="flex justify-center mb-6 text-near-black">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -21,7 +21,7 @@ export default function CheckoutSuccessPage() {
           Thank you for your purchase. We&apos;ve received your order and are getting it ready to be shipped.
         </p>
         
-        <div className="bg-off-white p-4 border border-light-grey mb-8 font-dm-mono text-xs text-mid-grey">
+        <div className="bg-off-white p-4 border border-light-grey mb-8 font-dm-mono text-xs text-mid-grey break-words">
           Order number: #LAPURA-{Math.floor(100000 + Math.random() * 900000)}
         </div>
         

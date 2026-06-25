@@ -19,7 +19,7 @@ export default function AddToCartButton({ id, name, price, imageSrc }: AddToCart
   return (
     <button
       onClick={handleAddToCart}
-      className="bg-near-black text-true-white font-dm-mono text-sm uppercase tracking-widest py-4 px-10 hover:bg-accent-gold hover:text-near-black transition-colors duration-300 w-full sm:w-auto mt-6"
+      className="w-full bg-near-black text-true-white font-dm-mono text-xs sm:text-sm uppercase tracking-[0.14em] sm:tracking-[0.16em] py-4 px-5 sm:px-10 hover:bg-accent-gold hover:text-near-black transition-colors duration-300 mt-6 text-center break-words"
     >
       Add to Cart — {price}
     </button>

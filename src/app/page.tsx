@@ -23,9 +23,9 @@ export default function HomePage() {
       />
       <Hero />
       <Divider />
-      <ProductStrip />
-      <Divider />
       <ScienceCredentials />
+      <Divider />
+      <ProductStrip />
       <Divider />
       <IngredientList />
       <Divider />

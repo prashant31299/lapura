@@ -24,7 +24,7 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="section-padding min-h-[60vh] flex flex-col items-center justify-center bg-off-white">
+      <div className="section-padding content-padding min-h-[60vh] flex flex-col items-center justify-center bg-off-white text-center">
         <h1 className="font-outfit text-3xl font-semibold tracking-tight text-near-black mb-4">
           Checkout
         </h1>
@@ -51,7 +51,7 @@ export default function CheckoutPage() {
           Checkout
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 balanced-grid">
           
           {/* Form Section */}
           <div className="lg:col-span-7 xl:col-span-8">
@@ -210,14 +210,14 @@ export default function CheckoutPage() {
 
           {/* Order Summary */}
           <div className="lg:col-span-5 xl:col-span-4">
-            <div className="bg-true-white border border-light-grey sticky top-24 p-6 md:p-8">
+            <div className="bg-true-white border border-light-grey lg:sticky lg:top-24 p-5 sm:p-6 md:p-8">
               <h2 className="font-outfit font-medium text-xl text-near-black mb-6">
                 Order Summary
               </h2>
               
               <div className="space-y-4 mb-6">
                 {items.map((item) => (
-                  <div key={item.id} className="flex gap-4 items-start">
+                  <div key={item.id} className="flex gap-4 items-start min-w-0">
                     <div className="relative w-16 h-20 bg-off-white flex-shrink-0 border border-light-grey">
                       <Image
                         src={item.imageSrc}
@@ -230,7 +230,7 @@ export default function CheckoutPage() {
                       </span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-outfit text-sm font-medium text-near-black truncate leading-tight mt-1">
+                      <h3 className="font-outfit text-sm font-medium text-near-black leading-tight mt-1">
                         {item.name}
                       </h3>
                       <p className="font-dm-sans text-xs text-mid-grey mt-1">{item.price}</p>

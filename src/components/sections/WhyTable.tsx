@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 const rows = [
@@ -32,14 +29,8 @@ export default function WhyTable() {
       <div className="max-w-content mx-auto content-padding">
         <SectionLabel>WHY LA&apos;PURA</SectionLabel>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mt-10 overflow-x-auto"
-        >
-          <table className="w-full border-collapse">
+        <div className="mt-10 overflow-x-auto">
+          <table className="w-full min-w-[560px] border-collapse">
             <thead>
               <tr className="border-b border-near-black">
                 <th className="text-left font-dm-mono text-xs text-mid-grey tracking-label uppercase py-4 pr-8">
@@ -66,7 +57,7 @@ export default function WhyTable() {
               ))}
             </tbody>
           </table>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

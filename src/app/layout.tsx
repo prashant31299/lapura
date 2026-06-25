@@ -36,7 +36,12 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "La'Pura Professional | BioFusion™ Restore Hair Care | Moringa & Amino Acids",
+  metadataBase: new URL("https://lapuraprofessional.com"),
+  title: {
+    default:
+      "La'Pura Professional | BioFusion™ Restore Hair Care | Moringa & Amino Acids",
+    template: "%s | La'Pura Professional",
+  },
   description:
     "Cosmetologist-formulated BioFusion™ Restore Shampoo & Conditioner. Moringa Seed Butter, 8 Essential Amino Acids, Baobab Extract. Science-backed salon hair care. Cruelty-free. GMP certified.",
   keywords: [
@@ -54,9 +59,28 @@ export const metadata: Metadata = {
     title: "La'Pura Professional | BioFusion™ Restore Hair Care",
     description:
       "Cosmetologist-formulated BioFusion™ Restore Shampoo & Conditioner with Moringa Seed Butter and 8 Essential Amino Acids.",
+    url: "/",
     type: "website",
     locale: "en_IN",
     siteName: "La'Pura Professional",
+    images: [
+      {
+        url: "/lapura/shampoo-hero-optimized.jpg",
+        width: 1200,
+        height: 1800,
+        alt: "La'Pura Professional BioFusion Restore hair care",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La'Pura Professional | BioFusion™ Restore Hair Care",
+    description:
+      "Salon-grade shampoo and conditioner with moringa, amino acids, and botanical actives.",
+    images: ["/lapura/shampoo-hero-optimized.jpg"],
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 

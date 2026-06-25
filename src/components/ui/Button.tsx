@@ -15,11 +15,11 @@ export default function Button({
   className = "",
   onClick,
 }: ButtonProps) {
-  const base = "inline-flex items-center font-dm-sans text-sm transition-all duration-200 cursor-pointer";
+  const base = "inline-flex items-center justify-center text-center font-dm-sans text-sm transition-all duration-200 cursor-pointer";
 
   const variants = {
     primary:
-      "bg-near-black text-white px-8 py-3.5 hover:bg-accent-gold hover:text-near-black",
+      "w-full sm:w-auto bg-near-black text-white px-6 sm:px-8 py-3.5 hover:bg-accent-gold hover:text-near-black",
     secondary:
       "text-near-black underline-offset-4 hover:underline hover:text-accent-gold group",
     ghost:

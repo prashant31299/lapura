@@ -1,45 +1,36 @@
-"use client";
-
-import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ProductCard from "@/components/ui/ProductCard";
-
-const products = [
-  {
-    name: "BioFusion™ Restore Shampoo",
-    subtitle: "With Moringa Oleifera Seed Butter + 8 Amino Acids",
-    imageSrc: "/conditioner 3.png",
-    tags: ["Gentle Cleanse", "Frizz Control", "Split End Care"],
-    price: "₹ 1,299",
-    href: "/products",
-  },
-  {
-    name: "BioFusion™ Restore Conditioner",
-    subtitle: "With Moringa Seed Butter + 8 Amino Acids",
-    imageSrc: "/conditioner.png",
-    tags: ["Smooths", "Detangles", "Shine Boost"],
-    price: "₹ 1,499",
-    href: "/products",
-  },
-];
+import { products } from "@/lib/products";
 
 export default function ProductStrip() {
   return (
-    <section className="section-padding bg-off-white">
+    <section id="products" className="section-padding bg-off-white">
       <div className="max-w-content mx-auto content-padding">
-        <SectionLabel>THE COLLECTION</SectionLabel>
+        <SectionLabel>FEATURED PAIR</SectionLabel>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
-        >
+        <div className="max-w-2xl mx-auto text-center mt-6">
+          <h2 className="section-title font-outfit font-semibold text-near-black tracking-tight mb-4">
+            The BioFusion™ Restore Collection
+          </h2>
+          <p className="text-base text-mid-grey font-dm-sans leading-relaxed">
+            Shampoo and conditioner designed to work together: balanced
+            cleansing, stronger conditioning, and a more polished finish.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           {products.map((product) => (
-            <ProductCard key={product.name} {...product} />
+            <ProductCard
+              key={product.slug}
+              name={product.name}
+              subtitle={product.shortDescription}
+              imageSrc={product.imageSrc}
+              tags={product.tags}
+              price={product.price}
+              href={`/products/${product.slug}`}
+            />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

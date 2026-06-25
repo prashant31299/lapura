@@ -4,32 +4,65 @@
 
 @layer base {
   * {
-    border-radius: 0 !important;
-    box-shadow: none !important;
+    box-sizing: border-box;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
     background-color: #F5F5F3;
     color: #0F0F0F;
     font-family: var(--font-dm-sans), sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
+    text-size-adjust: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-outfit), sans-serif;
     color: #0F0F0F;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
+    text-wrap: balance;
   }
 
   p {
     color: #6B6B6B;
     font-size: 15px;
     line-height: 1.7;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+  }
+
+  img {
+    height: auto;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0F0F0F;
+    outline-offset: 3px;
   }
 
   ::selection {
@@ -48,16 +81,23 @@
   }
 
   .section-padding {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .content-padding {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    max-width: 100%;
   }
 
   @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
     .content-padding {
       padding-left: 48px;
       padding-right: 48px;
@@ -65,10 +105,43 @@
   }
 
   @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+
     .content-padding {
       padding-left: 80px;
       padding-right: 80px;
     }
+  }
+
+  .surface-card {
+    border-radius: 8px;
+    box-shadow: 0 14px 36px rgba(15, 15, 15, 0.05);
+    overflow: hidden;
+  }
+
+  .chip {
+    border-radius: 999px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .page-title {
+    font-size: clamp(30px, 7vw, 72px);
+    line-height: 1.06;
+    text-wrap: normal;
+  }
+
+  .section-title {
+    font-size: clamp(26px, 5vw, 48px);
+    line-height: 1.12;
+    text-wrap: normal;
+  }
+
+  .balanced-grid {
+    min-width: 0;
   }
 }
 

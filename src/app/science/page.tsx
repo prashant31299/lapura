@@ -5,9 +5,12 @@ import Divider from "@/components/ui/Divider";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "The Science of BioFusion™ | La'Pura Professional",
+  title: "The Science of BioFusion™",
   description:
     "Science-backed, safe, thoughtfully designed professional hair care. Learn how La'Pura Professional combines botanical actives, amino acids, sustainability, and GMP quality standards.",
+  alternates: {
+    canonical: "/science",
+  },
 };
 
 const ingredients = [
@@ -129,7 +132,7 @@ export default function SciencePage() {
       <section className="section-padding bg-off-white">
         <div className="max-w-content mx-auto content-padding">
           <SectionLabel>THE SCIENCE</SectionLabel>
-          <h1 className="font-outfit font-semibold text-3xl md:text-hero text-near-black tracking-tight text-center mb-4">
+          <h1 className="page-title font-outfit font-semibold text-near-black tracking-tight text-center mb-4">
             The Science of BioFusion™
           </h1>
           <p className="font-dm-sans text-lg text-mid-grey text-center max-w-2xl mx-auto">
@@ -147,15 +150,15 @@ export default function SciencePage() {
         <div key={ingredient.name}>
           <section className="section-padding bg-off-white">
             <div className="max-w-[900px] mx-auto content-padding">
-              <div className="flex items-start gap-4 mb-2">
-                <span className="font-dm-mono text-sm text-mid-grey mt-1">
+              <div className="flex items-start gap-3 sm:gap-4 mb-2">
+                <span className="font-dm-mono text-sm text-mid-grey mt-1 shrink-0">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <div>
+                <div className="min-w-0">
                   <h2 className="font-outfit font-semibold text-2xl text-near-black tracking-tight mb-1">
                     {ingredient.name}
                   </h2>
-                  <p className="font-dm-mono text-xs text-mid-grey mb-4">
+                  <p className="font-dm-mono text-xs text-mid-grey mb-4 break-words">
                     INCI: {ingredient.inci}
                   </p>
                   <span className="inline-block border border-light-grey px-3 py-1 font-dm-mono text-xs text-mid-grey tracking-label uppercase mb-8">
@@ -164,7 +167,7 @@ export default function SciencePage() {
                 </div>
               </div>
 
-              <div className="space-y-6 pl-10">
+              <div className="space-y-6 pl-0 sm:pl-10">
                 <div>
                   <h3 className="font-dm-mono text-xs text-mid-grey tracking-label uppercase mb-3">
                     WHAT IT IS

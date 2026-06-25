@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 const pillars = [
@@ -11,12 +8,11 @@ const pillars = [
         <circle cx="7.5" cy="12" r="1.5" />
         <circle cx="16.5" cy="12" r="1.5" />
         <path d="M9 16c0 0 1.5 2 3 2s3-2 3-2" />
-        <path d="M5 9l-2-2M19 9l2-2" />
       </svg>
     ),
     title: "Cruelty-Free",
     description:
-      "Never tested on animals. We believe beautiful hair should never come at the cost of another living being. Every product carries our cruelty-free guarantee.",
+      "Never tested on animals. The brand brief is explicit about ethical development and animal-safe care.",
   },
   {
     icon: (
@@ -27,7 +23,7 @@ const pillars = [
     ),
     title: "Eco Packaging",
     description:
-      "Recycled and recyclable materials, eco-conscious merchandising, and stability-first packaging that protects product safety and performance.",
+      "Recycled and recyclable materials, eco-conscious merchandising, and packaging that protects product integrity.",
   },
   {
     icon: (
@@ -38,16 +34,16 @@ const pillars = [
     ),
     title: "GMP Standards",
     description:
-      "Good Manufacturing Practice standards guide consistency, safety, and trust at every stage, from packaging selection to storage and distribution.",
+      "Good Manufacturing Practice standards guide filling, sealing, storage, and distribution across the line.",
   },
 ];
 
 const processSteps = [
-  "Selecting the right jars, bottles, tubes, or pumps for the product type and consistency.",
-  "Preparing packaging components through hygienic handling and inspection.",
-  "Measuring and dispensing with precision tools for accurate, consistent filling.",
-  "Sealing and labeling with tamper-proof seals and compliant product information.",
-  "Storing and distributing with protective methods that maintain safety and effectiveness.",
+  "Selecting packaging that suits the formula and its consistency.",
+  "Preparing components through hygienic handling and inspection.",
+  "Measuring and dispensing with precision tools for consistency.",
+  "Sealing and labeling with tamper-proof, compliant details.",
+  "Storing and distributing with care to preserve safety and effectiveness.",
 ];
 
 export default function Sustainability() {
@@ -56,21 +52,22 @@ export default function Sustainability() {
       <div className="max-w-content mx-auto content-padding">
         <SectionLabel>OUR COMMITMENT</SectionLabel>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-3 mt-12"
-        >
-          {pillars.map((pillar, index) => (
+        <div className="max-w-2xl">
+          <h2 className="section-title font-outfit font-semibold text-near-black tracking-tight mb-4">
+            Sustainable choices should still feel premium and dependable.
+          </h2>
+          <p className="text-base text-mid-grey font-dm-sans leading-relaxed">
+            The brief frames sustainability as a practical discipline: materials,
+            manufacturing, and logistics all need to protect the product and the
+            environment at the same time.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-12 border-t border-l border-light-grey">
+          {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className={`text-center px-8 py-10 ${
-                index < pillars.length - 1
-                  ? "md:border-r border-b md:border-b-0 border-light-grey"
-                  : ""
-              }`}
+              className="text-center px-8 py-10 border-r border-b border-light-grey"
             >
               <div className="flex justify-center mb-5 text-near-black">
                 {pillar.icon}
@@ -83,19 +80,13 @@ export default function Sustainability() {
               </p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="mt-14 border-t border-light-grey pt-10"
-        >
+        <div className="mt-14 border-t border-light-grey pt-10">
           <h3 className="font-dm-mono text-xs text-mid-grey tracking-label uppercase mb-6">
             Manufacturing &amp; Quality Assurance
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {processSteps.map((step, index) => (
               <div key={step} className="border-l border-light-grey pl-4">
                 <span className="font-dm-mono text-xs text-mid-grey">
@@ -107,7 +98,7 @@ export default function Sustainability() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

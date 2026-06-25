@@ -1,86 +1,124 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
-import IngredientItem from "@/components/ui/IngredientItem";
+import { siteAssets } from "@/lib/siteAssets";
 
 const ingredients = [
   {
-    number: "01",
-    name: "MORINGA OLEIFERA SEED BUTTER",
-    description:
-      "Rich in vitamins, minerals, antioxidants, and fatty acids. Deeply nourishes, strengthens, protects, and restores dull or damaged hair while supporting softness and natural shine.",
+    name: "Moringa Seed Butter",
+    image: siteAssets.moringaSeedButter,
+    note: "Deep nourishment, softness, and shine support.",
   },
   {
-    number: "02",
-    name: "HYDROLYZED WHEAT, SOY & CORN PROTEIN",
-    description:
-      "A triple protein complex that rebuilds and reinforces the hair shaft, reduces breakage, improves resilience, and helps repair damaged hair fibers.",
+    name: "Baobab Seed",
+    image: siteAssets.baobabSeed,
+    note: "Omega-rich support for dryness and frizz control.",
   },
   {
-    number: "03",
-    name: "8 ESSENTIAL AMINO ACID COMPLEX",
-    description:
-      "The building blocks of keratin. These amino acids help repair damaged cuticles, promote collagen formation, improve elasticity, and restore natural strength.",
+    name: "Wheat Protein",
+    image: siteAssets.wheatProtein,
+    note: "Strengthens the hair shaft and helps reduce breakage.",
   },
   {
-    number: "04",
-    name: "ADANSONIA DIGITATA (BAOBAB) SEED EXTRACT",
-    description:
-      "Often called the Tree of Life, baobab is packed with nutrients and omega fatty acids that revitalize hair, protect against dryness, smooth frizz, and support overall hair health.",
+    name: "Soy Protein",
+    image: siteAssets.soyProtein,
+    note: "Adds resilience and structure to weakened strands.",
   },
   {
-    number: "05",
-    name: "NETTLE LEAF EXTRACT (URTICA DIOICA)",
-    description:
-      "A botanical powerhouse known for stimulating the scalp, supporting natural hair growth, strengthening roots, and helping reduce hair fall.",
+    name: "Corn Protein",
+    image: siteAssets.cornProtein,
+    note: "Helps improve texture, manageability, and moisture feel.",
   },
   {
-    number: "06",
-    name: "PANTHENOL (PRO-VITAMIN B5)",
-    description:
-      "A pro-vitamin that penetrates the hair shaft to improve elasticity, add shine, lock in long-lasting hydration, and strengthen hair against breakage.",
+    name: "Stinging Nettle",
+    image: siteAssets.stingingNettle,
+    note: "Botanical scalp support with a fresher, cleaner finish.",
+  },
+  {
+    name: "Trehalose",
+    image: siteAssets.trehalose,
+    note: "Helps hair hold on to moisture and stay flexible.",
+  },
+  {
+    name: "Peptides",
+    image: siteAssets.peptides,
+    note: "Supports a more science-led repair and care story.",
+  },
+  {
+    name: "Sodium PCA",
+    image: siteAssets.sodiumPca,
+    note: "A humectant for hydration and softness support.",
   },
 ];
 
 export default function IngredientList() {
   return (
-    <section className="bg-science-blue section-padding">
+    <section className="section-padding bg-science-blue">
       <div className="max-w-content mx-auto content-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          {/* Left — Vertical Label */}
-          <div className="lg:col-span-2 flex items-start">
-            <div className="hidden lg:block">
-              <span
-                className="label-mono block whitespace-nowrap"
-                style={{
-                  writingMode: "vertical-rl",
-                  transform: "rotate(180deg)",
-                  fontSize: "11px",
-                }}
-              >
-                KEY ACTIVES
-              </span>
-            </div>
-            <div className="lg:hidden">
-              <SectionLabel align="left">KEY ACTIVES</SectionLabel>
+        <SectionLabel align="left">KEY INGREDIENTS</SectionLabel>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="lg:col-span-4 min-w-0">
+            <h2 className="section-title font-outfit font-semibold text-near-black tracking-tight mb-5">
+              Botanical actives, mapped ingredient by ingredient.
+            </h2>
+            <p className="text-base text-mid-grey font-dm-sans leading-relaxed mb-8">
+              The brief emphasizes science-backed care with nature-led support.
+              This gallery surfaces the actives behind the formulas, from
+              proteins and amino acids to hydrators and plant extracts.
+            </p>
+
+            <div className="border border-light-grey bg-true-white p-5">
+              <p className="font-dm-mono text-[10px] text-mid-grey tracking-label mb-3">
+                CORE FUNCTIONS
+              </p>
+              <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-3">
+                {[
+                  "Moisture retention",
+                  "Barrier support",
+                  "Strength repair",
+                  "Scalp comfort",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="border border-light-grey px-3 py-3 bg-off-white"
+                  >
+                    <span className="font-dm-sans text-sm text-near-black">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Right — Ingredient List */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="lg:col-span-10"
-          >
-            <div className="border-t border-light-grey">
+          <div className="lg:col-span-8 min-w-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {ingredients.map((ingredient) => (
-                <IngredientItem key={ingredient.number} {...ingredient} />
+                <article
+                  key={ingredient.name}
+                  className="bg-true-white border border-light-grey overflow-hidden"
+                >
+                  <div className="relative aspect-[4/5] bg-off-white">
+                    <Image
+                      src={ingredient.image}
+                      alt={ingredient.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-outfit font-medium text-base text-near-black mb-2">
+                      {ingredient.name}
+                    </h3>
+                    <p className="font-dm-sans text-sm text-mid-grey leading-relaxed">
+                      {ingredient.note}
+                    </p>
+                  </div>
+                </article>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

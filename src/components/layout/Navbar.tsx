@@ -6,11 +6,11 @@ import { useCart } from "@/lib/CartContext";
 import CartSidebar from "@/components/ui/CartSidebar";
 
 const navLinks = [
-  { href: "/", label: "About" },
+  { href: "/#about", label: "About" },
   { href: "/products", label: "Products" },
   { href: "/science", label: "Science" },
-  { href: "#sustainability", label: "Sustainability" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#sustainability", label: "Sustainability" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -20,16 +20,16 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 w-full bg-true-white border-b border-light-grey"
+        className="sticky top-0 z-50 w-full border-b border-light-grey bg-true-white/95 backdrop-blur"
         style={{ height: "56px" }}
       >
         <div className="max-w-content mx-auto h-full content-padding flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-baseline gap-1 shrink-0">
+          <Link href="/" className="flex items-baseline gap-1 shrink-0 min-w-0">
             <span className="font-outfit font-semibold text-xl text-near-black tracking-tight">
               La&apos;Pura
             </span>
-            <span className="font-dm-mono text-xs text-mid-grey tracking-label uppercase">
+            <span className="hidden min-[380px]:inline font-dm-mono text-[10px] sm:text-xs text-mid-grey tracking-[0.18em] uppercase">
               Professional
             </span>
           </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile hamburger */}
-          <div className="lg:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-4 shrink-0">
             {/* Mobile Cart icon */}
             <button 
               aria-label="Cart" 
@@ -96,9 +96,12 @@ export default function Navbar() {
             </button>
             
             <button
+              type="button"
               className="text-near-black"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 {mobileOpen ? (
@@ -117,10 +120,23 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+      </nav>
 
-        {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="lg:hidden fixed inset-0 top-[96px] bg-true-white z-40 flex flex-col items-center justify-center gap-10">
+      {mobileOpen && (
+        <button
+          type="button"
+          aria-label="Close mobile menu"
+          className="fixed inset-0 z-[55] bg-near-black/20 lg:hidden"
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+
+      {mobileOpen && (
+        <div
+          id="mobile-menu"
+          className="fixed inset-x-0 top-14 bottom-0 z-[60] overflow-y-auto bg-true-white lg:hidden"
+        >
+          <div className="flex min-h-full flex-col justify-center gap-8 px-6 py-10">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -132,8 +148,8 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-        )}
-      </nav>
+        </div>
+      )}
       
       <CartSidebar />
     </>

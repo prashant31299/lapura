@@ -1,11 +1,15 @@
-const BASE_URL = "https://lapuraprofessional.com";
+import { products } from "@/lib/products";
+
+export const BASE_URL = "https://lapuraprofessional.com";
+
+const absoluteUrl = (path: string) => `${BASE_URL}${path}`;
 
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "La'Pura Professional",
   url: BASE_URL,
-  logo: `${BASE_URL}/conditioner.png`,
+  logo: absoluteUrl("/lapura/conditioner-pack-optimized.jpg"),
   description:
     "Salon-grade formulations that balance scientific precision, sensorial elegance, and long-term performance. Designed by a cosmetologist and built on deep R&D expertise.",
   sameAs: [],
@@ -16,56 +20,34 @@ export const organizationSchema = {
   },
 };
 
-export const productSchemas = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "BioFusion™ Restore Shampoo",
-    description:
-      "Gentle yet powerful professional cleanser with Moringa Seed Butter and 8 Essential Amino Acids. Strengthens hair from root to tip while reducing frizz and sealing split ends caused by chemical and mechanical damage. 300ML.",
-    image: `${BASE_URL}/conditioner 3.png`,
-    brand: {
-      "@type": "Brand",
-      name: "La'Pura Professional",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-    },
-    additionalProperty: [
-      { "@type": "PropertyValue", name: "Volume", value: "300ML" },
-      { "@type": "PropertyValue", name: "Formula", value: "BioFusion™" },
-      { "@type": "PropertyValue", name: "Vegan", value: "Yes" },
-      { "@type": "PropertyValue", name: "Cruelty-Free", value: "Yes" },
-    ],
+export const productSchemas = products.map((product) => ({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: product.name,
+  description: `${product.whatItIs} 300ML.`,
+  image: absoluteUrl(product.imageSrc),
+  url: absoluteUrl(`/products/${product.slug}`),
+  brand: {
+    "@type": "Brand",
+    name: "La'Pura Professional",
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "BioFusion™ Restore Conditioner",
-    description:
-      "Deeply hydrating conditioner with Moringa Seed Butter and 8 Essential Amino Acids. Smooths, detangles, and restores manageability, leaving hair soft, shiny, and resilient. 300ML.",
-    image: `${BASE_URL}/conditioner.png`,
-    brand: {
-      "@type": "Brand",
-      name: "La'Pura Professional",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-    },
-    additionalProperty: [
-      { "@type": "PropertyValue", name: "Volume", value: "300ML" },
-      { "@type": "PropertyValue", name: "Formula", value: "BioFusion™" },
-      { "@type": "PropertyValue", name: "Vegan", value: "Yes" },
-      { "@type": "PropertyValue", name: "Cruelty-Free", value: "Yes" },
-    ],
+  offers: {
+    "@type": "Offer",
+    url: absoluteUrl(`/products/${product.slug}`),
+    price: product.price.replace(/[^\d.]/g, ""),
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
   },
-];
+  additionalProperty: [
+    { "@type": "PropertyValue", name: "Volume", value: "300ML" },
+    { "@type": "PropertyValue", name: "Formula", value: "BioFusion™" },
+    { "@type": "PropertyValue", name: "Vegan", value: "Yes" },
+    { "@type": "PropertyValue", name: "Cruelty-Free", value: "Yes" },
+  ],
+}));
 
-export function breadcrumbSchema(path: string) {
+export function breadcrumbSchema(path: string, leafName?: string) {
   const items = [
     { name: "Home", url: BASE_URL },
   ];
@@ -74,6 +56,11 @@ export function breadcrumbSchema(path: string) {
     items.push({ name: "Products", url: `${BASE_URL}/products` });
   } else if (path === "/science") {
     items.push({ name: "Science", url: `${BASE_URL}/science` });
+  } else if (path.startsWith("/products/")) {
+    items.push({ name: "Products", url: `${BASE_URL}/products` });
+    if (leafName) {
+      items.push({ name: leafName, url: `${BASE_URL}${path}` });
+    }
   }
 
   return {

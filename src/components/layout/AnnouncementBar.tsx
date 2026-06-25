@@ -1,5 +1,3 @@
-"use client";
-
 export default function AnnouncementBar() {
   return (
     <div className="w-full bg-near-black overflow-hidden" style={{ height: "40px" }}>

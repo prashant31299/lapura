@@ -5,9 +5,9 @@ import Link from "next/link";
 const quickLinks = [
   { href: "/products", label: "Products" },
   { href: "/science", label: "Science" },
-  { href: "/", label: "About" },
-  { href: "#sustainability", label: "Sustainability" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#sustainability", label: "Sustainability" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -59,11 +59,11 @@ export default function Footer() {
             <p className="text-sm text-mid-grey mb-4 font-dm-sans">
               Get updates on new formulations and exclusive offers.
             </p>
-            <form className="flex" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col sm:flex-row gap-3 sm:gap-0" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Email address"
-                className="flex-1 bg-transparent border border-white/30 px-4 py-3 text-sm text-white font-dm-sans placeholder:text-mid-grey focus:outline-none focus:border-accent-gold transition-colors"
+                className="min-w-0 flex-1 bg-transparent border border-white/30 px-4 py-3 text-sm text-white font-dm-sans placeholder:text-mid-grey focus:outline-none focus:border-accent-gold transition-colors"
               />
               <button
                 type="submit"
@@ -82,11 +82,11 @@ export default function Footer() {
           <span className="font-dm-mono text-xs text-mid-grey">
             © 2025 La&apos;Pura Professional. All rights reserved.
           </span>
-          <div className="flex gap-6">
-            <Link href="#" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <Link href="/privacy" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">
+            <Link href="/terms" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">
               Terms of Use
             </Link>
           </div>

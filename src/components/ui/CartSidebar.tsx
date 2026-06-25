@@ -38,7 +38,7 @@ export default function CartSidebar() {
         </div>
 
         {/* Cart Items */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-6">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="text-light-grey">
@@ -56,9 +56,9 @@ export default function CartSidebar() {
             </div>
           ) : (
             items.map((item) => (
-              <div key={item.id} className="flex gap-4 p-4 bg-true-white border border-light-grey">
+              <div key={item.id} className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-true-white border border-light-grey">
                 {/* Product Image */}
-                <div className="relative w-20 h-24 bg-off-white flex-shrink-0">
+                <div className="relative w-16 h-20 sm:w-20 sm:h-24 bg-off-white flex-shrink-0">
                   <Image
                     src={item.imageSrc}
                     alt={item.name}
@@ -68,9 +68,9 @@ export default function CartSidebar() {
                 </div>
 
                 {/* Info */}
-                <div className="flex flex-col flex-1 justify-between">
+                <div className="flex flex-col flex-1 justify-between min-w-0">
                   <div>
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start gap-3">
                       <h3 className="font-outfit text-sm font-medium text-near-black leading-tight">
                         {item.name}
                       </h3>
@@ -118,7 +118,7 @@ export default function CartSidebar() {
 
         {/* Footer */}
         {items.length > 0 && (
-          <div className="p-6 bg-true-white border-t border-light-grey space-y-4">
+          <div className="p-4 sm:p-6 bg-true-white border-t border-light-grey space-y-4">
             <div className="flex justify-between items-center font-outfit text-lg">
               <span className="text-mid-grey">Subtotal</span>
               <span className="font-medium text-near-black">
