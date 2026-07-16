@@ -18,8 +18,11 @@ export default function TermsPage() {
             Terms of Use
           </h1>
           <p className="font-dm-sans text-lg text-mid-grey text-center max-w-2xl mx-auto">
-            These terms explain how the demo site may be used and set
-            expectations for browsing and checkout.
+            These terms apply when you browse or place an order with La&apos;Pura
+            Professional.
+          </p>
+          <p className="font-dm-mono text-xs text-mid-grey tracking-label uppercase text-center mt-5">
+            Last updated: July 16, 2026
           </p>
         </div>
       </section>
@@ -27,21 +30,38 @@ export default function TermsPage() {
       <Divider />
 
       <section className="section-padding bg-true-white">
-        <div className="max-w-[900px] mx-auto content-padding space-y-6">
+        <div className="max-w-[900px] mx-auto content-padding space-y-8">
           <p className="font-dm-sans text-base text-mid-grey leading-relaxed">
-            The site content is provided for demonstration purposes. Product
-            copy, checkout flows, and order confirmation are simulated.
+            By using this website, you agree to provide accurate information
+            when placing an order and to use the site only for lawful purposes.
+            We may update product information, availability, pricing, and these
+            terms when needed.
           </p>
           <p className="font-dm-sans text-base text-mid-grey leading-relaxed">
-            If you need production-ready terms, this page should be replaced
-            with your final legal wording before launch.
+            Product images and descriptions are provided to help you choose a
+            product. We make reasonable efforts to keep them accurate, but
+            colours and packaging may appear differently depending on your
+            screen or may change as we improve our products.
           </p>
-          <Link
-            href="/"
-            className="inline-flex bg-near-black text-true-white font-dm-mono text-sm uppercase tracking-widest py-3 px-6 hover:bg-accent-gold hover:text-near-black transition-colors duration-300"
-          >
-            Back Home
-          </Link>
+          <p className="font-dm-sans text-base text-mid-grey leading-relaxed">
+            Payment, order cancellation, shipping, delivery, and refund or
+            replacement matters are governed by our Payment Terms and Refund
+            &amp; Replacement Policy.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/payment-terms"
+              className="inline-flex bg-near-black text-true-white font-dm-mono text-sm uppercase tracking-widest py-3 px-6 hover:bg-accent-gold hover:text-near-black transition-colors duration-300"
+            >
+              Payment Terms
+            </Link>
+            <Link
+              href="/refund-policy"
+              className="inline-flex border border-near-black text-near-black font-dm-mono text-sm uppercase tracking-widest py-3 px-6 hover:bg-accent-gold hover:border-accent-gold transition-colors duration-300"
+            >
+              Refund Policy
+            </Link>
+          </div>
         </div>
       </section>
     </>

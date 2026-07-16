@@ -198,6 +198,25 @@ export default function CheckoutPage() {
                 </div>
               </section>
 
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  required
+                  className="accent-near-black w-4 h-4 mt-1 flex-shrink-0"
+                />
+                <span className="font-dm-sans text-sm text-mid-grey leading-relaxed">
+                  I agree to the{" "}
+                  <Link href="/payment-terms" className="underline hover:text-near-black">
+                    Payment Terms
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/refund-policy" className="underline hover:text-near-black">
+                    Refund &amp; Replacement Policy
+                  </Link>
+                  .
+                </span>
+              </label>
+
               <button 
                 type="submit" 
                 disabled={isSubmitting}

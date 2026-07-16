@@ -1,4 +1,5 @@
 import SectionLabel from "@/components/ui/SectionLabel";
+import Button from "@/components/ui/Button";
 
 export default function FounderStory() {
   return (
@@ -31,6 +32,11 @@ export default function FounderStory() {
               routine that feels elegant, works reliably, and supports long-term
               hair health.
             </p>
+            <div className="mb-6">
+              <Button href="/about" variant="secondary">
+                Read our full story
+              </Button>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
               {[
                 "Research-first formulation",

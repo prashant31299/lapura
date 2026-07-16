@@ -54,6 +54,8 @@ export function breadcrumbSchema(path: string, leafName?: string) {
 
   if (path === "/products") {
     items.push({ name: "Products", url: `${BASE_URL}/products` });
+  } else if (path === "/about") {
+    items.push({ name: "About", url: `${BASE_URL}/about` });
   } else if (path === "/science") {
     items.push({ name: "Science", url: `${BASE_URL}/science` });
   } else if (path.startsWith("/products/")) {

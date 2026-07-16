@@ -6,7 +6,7 @@ import { useCart } from "@/lib/CartContext";
 import CartSidebar from "@/components/ui/CartSidebar";
 
 const navLinks = [
-  { href: "/#about", label: "About" },
+  { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
   { href: "/science", label: "Science" },
   { href: "/#sustainability", label: "Sustainability" },

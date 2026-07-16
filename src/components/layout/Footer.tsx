@@ -5,7 +5,7 @@ import Link from "next/link";
 const quickLinks = [
   { href: "/products", label: "Products" },
   { href: "/science", label: "Science" },
-  { href: "/#about", label: "About" },
+  { href: "/about", label: "About" },
   { href: "/#sustainability", label: "Sustainability" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -88,6 +88,12 @@ export default function Footer() {
             </Link>
             <Link href="/terms" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">
               Terms of Use
+            </Link>
+            <Link href="/payment-terms" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">
+              Payment Terms
+            </Link>
+            <Link href="/refund-policy" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">
+              Refund Policy
             </Link>
           </div>
         </div>
