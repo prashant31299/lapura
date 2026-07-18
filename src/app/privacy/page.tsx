@@ -4,8 +4,9 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | La'Pura Professional",
+  title: "Privacy Policy",
   description: "Privacy policy for La'Pura Professional.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
@@ -18,8 +19,8 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="font-dm-sans text-lg text-mid-grey text-center max-w-2xl mx-auto">
-            We respect your privacy and keep this page simple: this site does
-            not collect personal data beyond what you voluntarily submit.
+            We respect your privacy and explain what this website currently
+            stores while online ordering is unavailable.
           </p>
         </div>
       </section>
@@ -29,12 +30,14 @@ export default function PrivacyPage() {
       <section className="section-padding bg-true-white">
         <div className="max-w-[900px] mx-auto content-padding space-y-6">
           <p className="font-dm-sans text-base text-mid-grey leading-relaxed">
-            Information you share through forms on this demo site is only used
-            to simulate the customer experience and is not sold or shared.
+            This website does not currently accept checkout, payment, contact,
+            or newsletter submissions. It does not ask you to provide card or
+            shipping information.
           </p>
           <p className="font-dm-sans text-base text-mid-grey leading-relaxed">
-            If you want a formal policy tailored to your business operations, we
-            can replace this placeholder with a full legal document.
+            Items added to your cart are stored only in your browser&apos;s local
+            storage so the cart remains available on that device. You can clear
+            that data by emptying the cart or clearing this site&apos;s browser data.
           </p>
           <Link
             href="/"

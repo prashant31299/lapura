@@ -1,6 +1,7 @@
 import { products } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 
-export const BASE_URL = "https://lapuraprofessional.com";
+export const BASE_URL = SITE_URL;
 
 const absoluteUrl = (path: string) => `${BASE_URL}${path}`;
 
@@ -10,37 +11,42 @@ export const organizationSchema = {
   name: "La'Pura Professional",
   url: BASE_URL,
   logo: absoluteUrl("/lapura/conditioner-pack-optimized.jpg"),
+  sameAs: [
+    "https://www.facebook.com/people/LaPura-Professional/61591858890681/",
+    "https://www.instagram.com/la_pura_professionals/",
+  ],
   description:
     "Salon-grade formulations that balance scientific precision, sensorial elegance, and long-term performance. Designed by a cosmetologist and built on deep R&D expertise.",
-  sameAs: [],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    availableLanguage: "English",
-  },
 };
 
 export const productSchemas = products.map((product) => ({
   "@context": "https://schema.org",
   "@type": "Product",
   name: product.name,
-  description: `${product.whatItIs} 300ML.`,
-  image: absoluteUrl(product.imageSrc),
+  description: `${product.whatItIs} Available in ${product.variants
+    .map((variant) => variant.volume)
+    .join(" and ")}.`,
+  image: [product.imageSrc, ...product.galleryImages].map(absoluteUrl),
   url: absoluteUrl(`/products/${product.slug}`),
   brand: {
     "@type": "Brand",
     name: "La'Pura Professional",
   },
-  offers: {
+  offers: product.variants.map((variant) => ({
     "@type": "Offer",
-    url: absoluteUrl(`/products/${product.slug}`),
-    price: product.price.replace(/[^\d.]/g, ""),
+    name: `${product.name} · ${variant.volume}`,
+    url: absoluteUrl(`/products/${product.slug}?size=${variant.id}`),
+    price: variant.price.replace(/[^\d.]/g, ""),
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
-  },
+  })),
   additionalProperty: [
-    { "@type": "PropertyValue", name: "Volume", value: "300ML" },
+    {
+      "@type": "PropertyValue",
+      name: "Available Sizes",
+      value: product.variants.map((variant) => variant.volume).join(", "),
+    },
     { "@type": "PropertyValue", name: "Formula", value: "BioFusion™" },
     { "@type": "PropertyValue", name: "Vegan", value: "Yes" },
     { "@type": "PropertyValue", name: "Cruelty-Free", value: "Yes" },

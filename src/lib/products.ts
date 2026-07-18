@@ -2,6 +2,13 @@ import { siteAssets } from "@/lib/siteAssets";
 
 export type ProductSlug = "biofusion-restore-shampoo" | "biofusion-restore-conditioner";
 
+export type ProductVariant = {
+  id: string;
+  volume: string;
+  price: string;
+  unitPrice: string;
+};
+
 export type ProductData = {
   slug: ProductSlug;
   name: string;
@@ -9,8 +16,9 @@ export type ProductData = {
   imageSrc: string;
   imageAlt: string;
   galleryImages: readonly string[];
+  galleryAlts: readonly string[];
+  variants: readonly [ProductVariant, ...ProductVariant[]];
   tags: string[];
-  price: string;
   shortDescription: string;
   whatItIs: string;
   benefits: string[];
@@ -29,10 +37,31 @@ export const products: ProductData[] = [
     name: "BioFusion™ Restore Shampoo",
     subtitle: "With Moringa Seed Butter + 8 Essential Amino Acids",
     imageSrc: siteAssets.shampooPack,
-    imageAlt: "La'Pura Professional BioFusion™ Restore Shampoo — 300ML",
+    imageAlt: "La'Pura Professional BioFusion™ Restore Shampoo 250 ml bottle",
     galleryImages: siteAssets.shampooGallery,
+    galleryAlts: [
+      "Hand dispensing La'Pura BioFusion Restore Shampoo from the pump",
+      "Creamy texture pouring over La'Pura BioFusion Restore Shampoo bottle",
+      "Back label of La'Pura BioFusion Restore Shampoo with ingredients and directions",
+      "La'Pura BioFusion Restore Shampoo key ingredients infographic featuring moringa seed butter, amino acids, and wheat, soy, and corn proteins",
+      "La'Pura BioFusion Restore Shampoo benefits infographic for frizz, split ends, moisture, strength, and shine",
+      "How to use La'Pura BioFusion Restore Shampoo in four steps",
+    ],
+    variants: [
+      {
+        id: "250ml",
+        volume: "250 ML",
+        price: "₹ 838",
+        unitPrice: "₹ 3.35/ml",
+      },
+      {
+        id: "100ml",
+        volume: "100 ML",
+        price: "₹ 343",
+        unitPrice: "₹ 3.43/ml",
+      },
+    ],
     tags: ["Gentle Cleanse", "Frizz Control", "Split End Care"],
-    price: "₹ 1,299",
     shortDescription:
       "A salon-style cleanser that balances effective cleansing with botanical care and damage recovery support.",
     whatItIs:
@@ -104,10 +133,31 @@ export const products: ProductData[] = [
     name: "BioFusion™ Restore Conditioner",
     subtitle: "With Moringa Seed Butter + 8 Amino Acids",
     imageSrc: siteAssets.conditionerPack,
-    imageAlt: "La'Pura Professional BioFusion™ Restore Conditioner — 300ML",
+    imageAlt:
+      "La'Pura Professional BioFusion™ Restore Conditioner 250 ml bottle",
     galleryImages: siteAssets.conditionerGallery,
+    galleryAlts: [
+      "Hand dispensing creamy La'Pura BioFusion Restore Conditioner from the pump",
+      "Back label of La'Pura BioFusion Restore Conditioner with ingredients and directions",
+      "La'Pura BioFusion Restore Conditioner key ingredients infographic featuring baobab, moringa, wheat soy corn proteins, and panthenol",
+      "La'Pura BioFusion Restore Conditioner benefits infographic for detangling, frizz, moisture, softness, and shine",
+      "How to use La'Pura BioFusion Restore Conditioner in four steps",
+    ],
+    variants: [
+      {
+        id: "250ml",
+        volume: "250 ML",
+        price: "₹ 847",
+        unitPrice: "₹ 3.38/ml",
+      },
+      {
+        id: "100ml",
+        volume: "100 ML",
+        price: "₹ 352",
+        unitPrice: "₹ 3.52/ml",
+      },
+    ],
     tags: ["Smooths", "Detangles", "Shine Boost"],
-    price: "₹ 1,499",
     shortDescription:
       "A nourishing conditioner that smooths, detangles, and restores manageability for a polished finish.",
     whatItIs:
@@ -172,4 +222,12 @@ export const products: ProductData[] = [
 
 export function getProductBySlug(slug: string) {
   return products.find((product) => product.slug === slug);
+}
+
+export function getLowestPricedVariant(product: ProductData) {
+  return product.variants.reduce((lowest, variant) => {
+    const lowestPrice = Number(lowest.price.replace(/[^\d.]/g, ""));
+    const variantPrice = Number(variant.price.replace(/[^\d.]/g, ""));
+    return variantPrice < lowestPrice ? variant : lowest;
+  });
 }

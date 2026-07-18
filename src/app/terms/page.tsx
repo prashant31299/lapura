@@ -4,8 +4,9 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | La'Pura Professional",
+  title: "Terms of Use",
   description: "Terms of use for La'Pura Professional.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

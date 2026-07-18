@@ -3,7 +3,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
 import ProductCard from "@/components/ui/ProductCard";
 import { breadcrumbSchema } from "@/lib/schema";
-import { products } from "@/lib/products";
+import { getLowestPricedVariant, products } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Products",
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     url: "/products",
     images: [
       {
-        url: "/lapura/shampoo-pack-optimized.jpg",
+        url: "/lapura/gallery-optimized/shampoo/v2/biofusion-restore-shampoo-front-250ml.webp",
         width: 1200,
-        height: 1800,
-        alt: "BioFusion Restore shampoo and conditioner collection",
+        height: 1500,
+        alt: "La'Pura Professional BioFusion Restore Shampoo 250 ml bottle",
       },
     ],
   },
@@ -65,8 +65,10 @@ export default function ProductsPage() {
                 name={product.name}
                 subtitle={product.shortDescription}
                 imageSrc={product.imageSrc}
+                imageAlt={product.imageAlt}
                 tags={product.tags}
-                price={product.price}
+                price={`From ${getLowestPricedVariant(product).price}`}
+                priceNote="100 ML & 250 ML available"
                 href={`/products/${product.slug}`}
               />
             ))}

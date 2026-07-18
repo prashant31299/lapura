@@ -5,8 +5,10 @@ interface ProductCardProps {
   name: string;
   subtitle: string;
   imageSrc: string | StaticImageData;
+  imageAlt?: string;
   tags: string[];
   price?: string;
+  priceNote?: string;
   href: string;
 }
 
@@ -14,21 +16,23 @@ export default function ProductCard({
   name,
   subtitle,
   imageSrc,
+  imageAlt,
   tags,
   price = "₹ —",
+  priceNote,
   href,
 }: ProductCardProps) {
   return (
     <Link
       href={href}
-      className="surface-card block h-full bg-true-white border border-light-grey group overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,15,15,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-near-black"
+      className="surface-card block h-full rounded-2xl bg-true-white border border-light-grey group overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,15,15,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-near-black"
       aria-label={`Open details for ${name}`}
     >
       <article className="flex h-full flex-col">
         <div className="relative aspect-[4/5] sm:aspect-[3/4] bg-gradient-to-b from-off-white to-true-white p-5 sm:p-8 flex items-center justify-center overflow-hidden">
           <Image
             src={imageSrc}
-            alt={name}
+            alt={imageAlt ?? name}
             fill
             className="object-contain p-5 sm:p-8 transition-transform duration-500 group-hover:scale-[1.04]"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -58,8 +62,15 @@ export default function ProductCard({
           </div>
 
           <div className="flex flex-col min-[420px]:flex-row min-[420px]:items-center min-[420px]:justify-between gap-3 min-[420px]:gap-4 mt-auto pt-4">
-            <span className="font-outfit font-medium text-lg text-near-black">
-              {price}
+            <span>
+              <span className="block font-outfit font-medium text-lg text-near-black">
+                {price}
+              </span>
+              {priceNote && (
+                <span className="block font-dm-mono text-[9px] uppercase tracking-[0.12em] text-mid-grey mt-1">
+                  {priceNote}
+                </span>
+              )}
             </span>
             <span className="font-dm-sans text-sm text-mid-grey inline-flex items-center gap-1">
               Open Product

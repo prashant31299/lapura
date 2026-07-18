@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import { CartProvider } from "@/lib/CartContext";
+import { SITE_URL } from "@/lib/site";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -36,7 +37,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lapuraprofessional.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default:
       "La'Pura Professional | BioFusion™ Restore Hair Care | Moringa & Amino Acids",
@@ -65,10 +66,10 @@ export const metadata: Metadata = {
     siteName: "La'Pura Professional",
     images: [
       {
-        url: "/lapura/shampoo-hero-optimized.jpg",
+        url: "/lapura/gallery-optimized/shampoo/v2/biofusion-restore-shampoo-texture-pour.webp",
         width: 1200,
-        height: 1800,
-        alt: "La'Pura Professional BioFusion Restore hair care",
+        height: 1500,
+        alt: "La'Pura Professional BioFusion Restore Shampoo 250 ml with creamy texture",
       },
     ],
   },
@@ -77,7 +78,9 @@ export const metadata: Metadata = {
     title: "La'Pura Professional | BioFusion™ Restore Hair Care",
     description:
       "Salon-grade shampoo and conditioner with moringa, amino acids, and botanical actives.",
-    images: ["/lapura/shampoo-hero-optimized.jpg"],
+    images: [
+      "/lapura/gallery-optimized/shampoo/v2/biofusion-restore-shampoo-texture-pour.webp",
+    ],
   },
   alternates: {
     canonical: "/",

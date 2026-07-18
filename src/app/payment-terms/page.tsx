@@ -4,9 +4,10 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
 
 export const metadata: Metadata = {
-  title: "Payment Terms | La'Pura Professional",
+  title: "Payment Terms",
   description:
     "Payment, pricing, order cancellation, shipping, and delivery terms for La'Pura Professional.",
+  alternates: { canonical: "/payment-terms" },
 };
 
 const sectionClassName = "space-y-3";
@@ -86,10 +87,9 @@ export default function PaymentTermsPage() {
           <section className={sectionClassName}>
             <h2 className={headingClassName}>Need Help?</h2>
             <p className={copyClassName}>
-              For assistance with an order, payment, cancellation, or delivery,
-              please contact our customer-support team using the contact details
-              on this website. Support hours are Monday–Saturday, 10:00 AM–6:00
-              PM IST.
+              Online ordering is currently unavailable. Customer-support contact
+              information and support hours will be published before checkout is
+              enabled.
             </p>
           </section>
 

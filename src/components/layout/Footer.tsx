@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 const quickLinks = [
@@ -7,10 +5,22 @@ const quickLinks = [
   { href: "/science", label: "Science" },
   { href: "/about", label: "About" },
   { href: "/#sustainability", label: "Sustainability" },
-  { href: "/#contact", label: "Contact" },
+];
+
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/people/LaPura-Professional/61591858890681/",
+    label: "Facebook",
+  },
+  {
+    href: "https://www.instagram.com/la_pura_professionals/",
+    label: "Instagram",
+  },
 ];
 
 export default function Footer() {
+  const currentYear = new Date().getUTCFullYear();
+
   return (
     <footer id="contact" className="bg-near-black text-white">
       <div className="max-w-content mx-auto content-padding section-padding">
@@ -30,6 +40,25 @@ export default function Footer() {
               <br />
               Crafted with Care.
             </p>
+            <div className="mt-6">
+              <h4 className="font-dm-mono text-[10px] text-mid-grey tracking-label uppercase mb-3">
+                Follow Us
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow La'Pura Professional on ${social.label}`}
+                    className="inline-flex items-center border border-white/20 px-3 py-2 font-dm-mono text-[10px] uppercase tracking-[0.14em] text-white/70 hover:border-accent-gold hover:text-accent-gold transition-colors"
+                  >
+                    {social.label}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Col 2: Quick Links */}
@@ -54,24 +83,17 @@ export default function Footer() {
           {/* Col 3: Stay Informed */}
           <div>
             <h4 className="font-dm-mono text-xs text-mid-grey tracking-label uppercase mb-6">
-              Stay Informed
+              Shop the Range
             </h4>
             <p className="text-sm text-mid-grey mb-4 font-dm-sans">
-              Get updates on new formulations and exclusive offers.
+              Explore our BioFusion™ Restore formulas and product details.
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 sm:gap-0" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Email address"
-                className="min-w-0 flex-1 bg-transparent border border-white/30 px-4 py-3 text-sm text-white font-dm-sans placeholder:text-mid-grey focus:outline-none focus:border-accent-gold transition-colors"
-              />
-              <button
-                type="submit"
-                className="bg-accent-gold text-near-black px-6 py-3 font-dm-mono text-xs tracking-label uppercase hover:bg-white transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+            <Link
+              href="/products"
+              className="inline-flex bg-accent-gold text-near-black px-6 py-3 font-dm-mono text-xs tracking-label uppercase hover:bg-white transition-colors"
+            >
+              Explore Products
+            </Link>
           </div>
         </div>
       </div>
@@ -80,7 +102,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-content mx-auto content-padding py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-dm-mono text-xs text-mid-grey">
-            © 2025 La&apos;Pura Professional. All rights reserved.
+            © {currentYear} La&apos;Pura Professional. All rights reserved.
           </span>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="font-dm-mono text-xs text-mid-grey hover:text-white transition-colors">

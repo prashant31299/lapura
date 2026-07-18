@@ -4,9 +4,10 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Divider from "@/components/ui/Divider";
 
 export const metadata: Metadata = {
-  title: "Refund & Replacement Policy | La'Pura Professional",
+  title: "Refund & Replacement Policy",
   description:
     "Return, refund, and replacement policy for La'Pura Professional products.",
+  alternates: { canonical: "/refund-policy" },
 };
 
 const sectionClassName = "space-y-3";
@@ -93,8 +94,9 @@ export default function RefundPolicyPage() {
               La&apos;Pura Professional assesses each claim and may request
               additional information, photographs, or videos to verify it. For
               support with a replacement or refund question, please use the
-              customer-support contact details on this website. Support hours
-              are Monday–Saturday, 10:00 AM–6:00 PM IST.
+              the customer-support channel shown with the order. Online ordering
+              is currently unavailable, and support details will be published
+              before checkout is enabled.
             </p>
           </section>
 

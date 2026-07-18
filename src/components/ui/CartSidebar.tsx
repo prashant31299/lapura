@@ -85,6 +85,11 @@ export default function CartSidebar() {
                         </svg>
                       </button>
                     </div>
+                    {item.size && (
+                      <p className="font-dm-mono text-[10px] uppercase tracking-[0.14em] text-mid-grey mt-1">
+                        {item.size}
+                      </p>
+                    )}
                     <p className="font-dm-sans text-sm text-mid-grey mt-1">{item.price}</p>
                   </div>
 

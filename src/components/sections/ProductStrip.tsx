@@ -1,6 +1,6 @@
 import SectionLabel from "@/components/ui/SectionLabel";
 import ProductCard from "@/components/ui/ProductCard";
-import { products } from "@/lib/products";
+import { getLowestPricedVariant, products } from "@/lib/products";
 
 export default function ProductStrip() {
   return (
@@ -25,8 +25,10 @@ export default function ProductStrip() {
               name={product.name}
               subtitle={product.shortDescription}
               imageSrc={product.imageSrc}
+              imageAlt={product.imageAlt}
               tags={product.tags}
-              price={product.price}
+              price={`From ${getLowestPricedVariant(product).price}`}
+              priceNote="100 ML & 250 ML available"
               href={`/products/${product.slug}`}
             />
           ))}

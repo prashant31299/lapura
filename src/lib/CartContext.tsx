@@ -5,6 +5,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 export interface CartItem {
   id: string; // The product name or unique ID
   name: string;
+  size?: string;
   price: string;
   imageSrc: string;
   quantity: number;
@@ -24,26 +25,53 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
+function isCartItem(value: unknown): value is CartItem {
+  if (!value || typeof value !== "object") return false;
+
+  const item = value as Partial<CartItem>;
+  return (
+    typeof item.id === "string" &&
+    typeof item.name === "string" &&
+    (item.size === undefined || typeof item.size === "string") &&
+    typeof item.price === "string" &&
+    typeof item.imageSrc === "string" &&
+    Number.isInteger(item.quantity) &&
+    Number(item.quantity) > 0
+  );
+}
+
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // Cart storage only exists in the browser; defer it until after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
     const savedCart = localStorage.getItem("lapura_cart");
     if (savedCart) {
       try {
-        setItems(JSON.parse(savedCart));
+        const parsedCart: unknown = JSON.parse(savedCart);
+        if (Array.isArray(parsedCart)) {
+          setItems(parsedCart.filter(isCartItem));
+        } else {
+          localStorage.removeItem("lapura_cart");
+        }
       } catch (e) {
         console.error("Failed to parse cart from local storage", e);
+        localStorage.removeItem("lapura_cart");
       }
     }
   }, []);
 
   useEffect(() => {
     if (isMounted) {
-      localStorage.setItem("lapura_cart", JSON.stringify(items));
+      try {
+        localStorage.setItem("lapura_cart", JSON.stringify(items));
+      } catch (e) {
+        console.error("Failed to save cart to local storage", e);
+      }
     }
   }, [items, isMounted]);
 

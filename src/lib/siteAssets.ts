@@ -1,23 +1,28 @@
 const base = "/lapura";
+const shampooV2 = `${base}/gallery-optimized/shampoo/v2`;
+const conditionerV2 = `${base}/gallery-optimized/conditioner/v2`;
 
 export const siteAssets = {
-  shampooHero: `${base}/shampoo-hero-optimized.jpg`,
-  shampooPack: `${base}/shampoo-pack-optimized.jpg`,
-  shampooPour: `${base}/shampoo-pour.jpeg`,
+  shampooHero: `${shampooV2}/biofusion-restore-shampoo-texture-pour.webp`,
+  shampooPack: `${shampooV2}/biofusion-restore-shampoo-front-250ml.webp`,
+  shampooPour: `${shampooV2}/biofusion-restore-shampoo-dispensing.webp`,
   shampooGallery: [
-    `${base}/gallery-optimized/shampoo/01.jpg`,
-    `${base}/gallery-optimized/shampoo/02.jpg`,
-    `${base}/gallery-optimized/shampoo/03.jpg`,
-    `${base}/gallery-optimized/shampoo/04.jpg`,
+    `${shampooV2}/biofusion-restore-shampoo-dispensing.webp`,
+    `${shampooV2}/biofusion-restore-shampoo-texture-pour.webp`,
+    `${shampooV2}/biofusion-restore-shampoo-back-label.webp`,
+    `${shampooV2}/biofusion-restore-shampoo-key-ingredients-infographic.webp`,
+    `${shampooV2}/biofusion-restore-shampoo-benefits-infographic.webp`,
+    `${shampooV2}/biofusion-restore-shampoo-how-to-use-infographic.webp`,
   ],
-  conditionerHero: `${base}/conditioner-hero.jpeg`,
-  conditionerPack: `${base}/conditioner-pack-optimized.jpg`,
-  conditionerPour: `${base}/conditioner-pour-optimized.jpg`,
+  conditionerHero: `${conditionerV2}/biofusion-restore-conditioner-dispensing.webp`,
+  conditionerPack: `${conditionerV2}/biofusion-restore-conditioner-front-250ml.webp`,
+  conditionerPour: `${conditionerV2}/biofusion-restore-conditioner-dispensing.webp`,
   conditionerGallery: [
-    `${base}/gallery-optimized/conditioner/01.jpg`,
-    `${base}/gallery-optimized/conditioner/02.jpg`,
-    `${base}/gallery-optimized/conditioner/03.jpg`,
-    `${base}/gallery-optimized/conditioner/04.jpg`,
+    `${conditionerV2}/biofusion-restore-conditioner-dispensing.webp`,
+    `${conditionerV2}/biofusion-restore-conditioner-back-label.webp`,
+    `${conditionerV2}/biofusion-restore-conditioner-key-ingredients-infographic.webp`,
+    `${conditionerV2}/biofusion-restore-conditioner-benefits-infographic.webp`,
+    `${conditionerV2}/biofusion-restore-conditioner-how-to-use-infographic.webp`,
   ],
   moringaSeedButter: `${base}/moringa-seed-butter-optimized.jpg`,
   baobabSeed: `${base}/baobab-seed-optimized.jpg`,

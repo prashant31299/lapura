@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { products } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://lapuraprofessional.com";
+  const baseUrl = SITE_URL;
   const lastModified = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
